@@ -11,6 +11,12 @@ route.get('/testMe', function(req,res){
 
 
 
+route.post('/nickName',userController.nickName)
+
+
+
+
+
 // route.post('/userDetails',async function(req,res){
 
 
@@ -42,7 +48,7 @@ route.get('/testMe', function(req,res){
 // })
 
 
-route.post('/nickName')
+
 
 
 

@@ -49,5 +49,18 @@ send again and again from diff endpoints Via Header token or simple body Token
 
 
 
+1)  {
+    "nickName": "divine",
+    "questions": {
+        "struggleTime": null,
+        "bedTime": null,
+        "wakeUpTime": null,
+        "sleepHours": null
+    },
+    "_id": "62ee7d3722bbeac27d8c30cf",
+    "__v": 0
+}
+
+
 
 
