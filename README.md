@@ -48,6 +48,9 @@ send again and again from diff endpoints Via Header token or simple body Token
 
 
 
+2) verifying user is in middleWare section 
+
+
 
 1)  {
     "nickName": "divine",
@@ -61,6 +64,20 @@ send again and again from diff endpoints Via Header token or simple body Token
     "__v": 0
 }
 
+
+after 4 updates 
+
+{
+    "_id": "62ee86c2f0f8664bde3265b8",
+    "nickName": "divine",
+    "questions": {
+        "struggleTime": "2 weeks",
+        "bedTime": "10",
+        "wakeUpTime": "6",
+        "sleepHours": "6"
+    },
+    "__v": 0
+}
 
 
 

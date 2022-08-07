@@ -38,52 +38,65 @@ const nickName = async function(req,res){
 
 }
 
+
+const struggleTime = async function (req,res){
+
+    
+    let struggleTime = {
+        "questions.struggleTime":req.query.struggleTime
+
+    }
+   let struggleTimeUpdate = await userModel.findOneAndUpdate({_id:req.userId},struggleTime,{new:true})
+
+   res.send(struggleTimeUpdate)
+
+
+}
+
 const bedTime =async function(req,res){
-
-
-    let bedTime  = req.query.bedTime
-    console.log("line 63",bedTime)
-
-    //accessing token from header 
-    let token = req.headers["authorization"]
-
-    const verifyUserFromToken = jwt.verify(token,"MyPrivateKey")
-    console.log(verifyUserFromToken)
-    if(!verifyUserFromToken){
-        return res.send(" not authorized ")
-    }
-
-
-    // 
-    let userId = verifyUserFromToken.userId
-
-    let user = await userModel.findById(userId)
-
-    if(!user){
-        return res.send('user Not Found ')
-    }
 
 
     
 
-    console.log(user.questions.bedTime )
-    user.questions.bedTime = bedTime
-    console.log(user.questions.bedTime )
+    let bedTime = {
+        "questions.bedTime":req.query.bedTime
 
-    res.send(" move on to the next Questions ")
+    }
+   let bedTimeUpdate = await userModel.findOneAndUpdate({_id:req.userId},bedTime,{new:true})
 
+   res.send(bedTimeUpdate)
+
+
+
+
+    
     
     
 
 }
 
 const wakeUpTime = async function(req,res){
+    let wakeUpTime = {
+        "questions.wakeUpTime":req.query.wakeUpTime
+
+    }
+   let wakeUpTimeUpdate = await userModel.findOneAndUpdate({_id:req.userId},wakeUpTime,{new:true})
+
+   res.send(wakeUpTimeUpdate)
 
 }
 
 const sleepHours = async function(req,res){
 
+    let sleepHours = {
+        "questions.sleepHours":req.query.sleepHours
+
+    }
+   let sleepHoursUpdate = await userModel.findOneAndUpdate({_id:req.userId},sleepHours,{new:true})
+
+   res.send(sleepHoursUpdate)
+
 }
 
 
-module.exports ={nickName,bedTime,wakeUpTime,sleepHours}
+module.exports ={nickName,struggleTime,bedTime,wakeUpTime,sleepHours}
