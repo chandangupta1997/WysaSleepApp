@@ -3,10 +3,16 @@
 const userModel = require('../Models/userModel')
 const jwt=require('jsonwebtoken')
 
+const validator = require('../validations/validator')
+
 const nickName = async function(req,res){
 
     let data = req.query.nickName 
-    console.log(data)
+   if(!validator.isValid(data)){
+
+    return res.status(400).send({status:false,msg:"please provide valid input "})
+   }
+    
 
 
     let dbData ={
