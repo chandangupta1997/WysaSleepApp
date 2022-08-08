@@ -25,7 +25,7 @@ successfull response
 
 
 
-# approach 2 
+# approach 2   (switch to step by step branch ) 
 
 post-->put-->put -->put 
 
@@ -81,3 +81,12 @@ after 4 updates
 
 
 
+** for simplicity vaidations is maintained in third branch (with Validations)
+** apis are have space for integration for future modules.
+
+
+
+Q .How will i delete data ?
+i followed soft delete methods i.e every schema is have a key of isDeleted which has default boolean value false
+
+when user wanna delete its account he/she just turn isDeletedkey to true . data wont be deleted but flagged and remain in database admin can change the status again
