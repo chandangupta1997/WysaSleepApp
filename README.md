@@ -1,4 +1,6 @@
 
+** for simplicity vaidations is maintained in third branch (with Validations)
+** apis are have space for integration for future modules.
 
 
 
@@ -9,7 +11,7 @@ get all the data from req.body (from frontend) to mongoDb and then process that 
 route.post('/userDetails',-------
 
 
-successfull response 
+successful response 
 
 {
     "nickName": "Disco",
@@ -81,8 +83,6 @@ after 4 updates
 
 
 
-** for simplicity vaidations is maintained in third branch (with Validations)
-** apis are have space for integration for future modules.
 
 
 
